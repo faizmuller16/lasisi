@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructors</title>
+</head>
+<body>
+    <h1>Javascript Object Constructors</h1>
+
+    <script>
+        // const sheu = {
+        //     firstName: "Sheu",
+        //     lastName: "Qazeem",
+        //     age: 23,
+        //     height: "1.2m",
+        //     isDark: true,
+        //     likes: ["Movie", "Game", "Football", "Sleep", "Food"]
+        // }
+        // const faiz = {
+        //     firstName: "Faiz",
+        //     lastName: "Adewale",
+        //     age: 45,
+        //     height: "0.8m",
+        //     isDark: true,
+        //     likes: ["Game", "Football", "Sleep"]
+        // }
+
+        function  Student(fname, lname, age, height, dark, likes) {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.studentAge = age;
+            this.height = height;
+            this.isDark = dark;
+            this.likes = likes;
+            this.addAge = function(years) {
+                this.studentAge += years;
+            }
+            this.addLikes = function(like) {
+                this.likes.push(like);
+            }
+            this.removeLike = function(like) {
+                const allLikes = this.likes;
+                this.likes = allLikes.filter(lke => lke !== like);
+            }
+        }
+
+        const sheu = new Student("Sheu", "Qazeem", 23, "1.2m", true, ["Football", "Sleep", "Food"])
+        sheu.addAge(10);
+        sheu.removeLike("Movie")
+
+        const faiz = new Student("Faiz", "Adewale", 45, "0.8m", true, ["Football", "Sleep", "Food"]
+        )
+        faiz.addAge(100)
+        faiz.removeLike("Football")
+
+        const ridwan = new Student("Ridwan", "Adebayo", 23, "1.2m", true, ["Music", "Money", "Coding", "X", "Football"])
+        ridwan.addAge(100)
+
+        console.log(sheu);
+        console.log(faiz);
+        console.log(ridwan);
+    </script>
+</body>
+</html>

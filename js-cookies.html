@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Cookies</title>
+</head>
+<body>
+    <h1>Javascript Cookies</h1>
+
+    <script>
+        const cookies = document.cookie.split("; ");
+        const langCookie = cookies.find(function(cookie) {
+            return cookie.indexOf("lang=") === 0;
+        });
+        const langCookieValue = langCookie.split("=")[1];
+        console.log(langCookie);
+    </script>
+</body>
+</html>

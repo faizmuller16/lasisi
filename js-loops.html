@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loops</title>
+</head>
+<body>
+    <h1>JS LOOPS</h1>
+
+    <script>
+        //for, while, do while, for in;
+        //for of
+        const student = ["Ibrahim", "Rashid", "Sofiyyah", "Faiz", "Salamo", "Ridwan", "Azeez", "Tayo", "Muiz"];
+
+        document.write("<ul>")
+        let n = 0;
+        //  {
+        //     
+        //     
+        // }
+
+        // do {
+        //     document.write("<li>" + student[n] + "</li>");
+        //     n += 1;
+        // } while(n > 8)
+        // document.write("</ul>")
+        
+
+        for(n = 0; n < student.length; n += 1) {
+            console.log(n);
+            document.write("<li>" + student[n] + "</li>");
+        }
+        
+        // document.write("<li>" + student[1] + "</li>");
+        // document.write("<li>" + student[2] + "</li>");
+        // document.write("<li>" + student[3] + "</li>");
+        
+
+        const book = {title: "Rich dad, Poor dad", author: "Ribert Kiyosaki", yup:2000, publisher: "ARIB PLC"};
+
+        // for(let prop in object)
+
+        for (let prop in book) {
+            document.write(prop + ": " + book[prop]);
+            document.write("<br>");
+        }
+
+        // const teachers = ["Mr Ade", "Mr Fola", "Prof Arib"];
+        const books = [
+            {title: "Rich dad, Poor dad", author: "Ribert Kiyosaki"},
+            {title: "The Millionaire Fastlane", author: "MJ Demarco"},
+            {title: "The years Of Childhood", author: "Wello Soyinka"},
+
+        ]
+        document.write("<br>")
+        for(let item of books) {
+            document.write(item);
+            for (let key in item) {
+                document.write(key + ": " + item[key]);
+                document.write("br")
+            }
+            document.write("<hr>")
+        }
+    </script>
+</body>
+</html>

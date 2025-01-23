@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+<body>
+    <h1>Javascript DOM EVENTS</h1>
+    <button id="btn">Click me</button>
+    <p>This is my initial text</p>
+    <input type="text"><button id="toggleBtn">hide</button>
+    <p id="inputDisplay"></p>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const p = document.querySelector("p");
+        const toggleBtn = document.getElementById("toggleBtn");
+        const input = document.querySelector("input");
+        const inputDisplay = document.getElementById("inputDisplay");
+
+        btn.onmouseover = function() {
+            // alert("Button was clicked!");
+            btn.innerHTML = "Mouse is overed on";
+        }
+
+        btn.onmouseleave = function() {
+            btn.innerHTML = "Mouse left!";
+        }
+
+        btn.onclick = function() {
+            if (p.innerHTML === "This is my initial text") {
+                 p.innerHTML = "New content from javaScript!";
+            } else {
+                p.innerHTML = "This is an inner text"
+            } 
+        }
+
+        toggleBtn.addEventListener("click", togglePassword)
+        function togglePassword() {
+            if (input.type === "text") {
+                input.type = "password";
+                toogleBtn.innerHTML = "show";
+            } else {
+                input.type = "text";
+                toogleBtn.innerHTML = "hide"
+            }
+        }
+
+        input.onkeyup = function() {
+            console.log("Hello World")
+            inputDisplay.innerHTML = input.value;
+        }
+        // btn.addEventListener("click", dispalyAlert)
+        // function dispalyAlert() {
+        //     alert("Button was clicked!");
+        // }
+        // an anonymous function is a function that does not have a function name
+        // mousehover
+        // innerHTML is used to set and get a content, getter means it is used to get the content of an element, setter means that it is
+        // used to set the content of an element. 
+        // unkeyup is gonna track when u press and release the keyboard, that is when the event would be work 
+        // unkeydown
+    </script>
+</body>
+</html>

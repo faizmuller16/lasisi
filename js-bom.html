@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Browser Object Model</title>
+</head>
+<body>
+    <h1>Browser Object Model</h1>
+    <p></p>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <h2></h2>
+    <script> 
+        const div1 = document.querySelectorAll("div")[0];
+        const div2 = document.querySelectorAll("div")[1];
+        const div3 = document.querySelectorAll("div")[2];
+        const div4 = document.querySelectorAll("div")[3];
+        const h2 = document.querySelector("h2");
+        window.document.querySelector("p").innerHTML = "Hello World!!"; 
+        div1.innerHTML = "Window Width: " + window.innerWidth;
+        div2.innerHTML = "Window Height: " + window.innerHeight;
+        div3.innerHTML = "The screen width: " + window.screen.availWidth;
+        div4.innerHTML = "The screen height: " + window.screen.availHeight;
+        window.onresize = function() {
+            div1.innerHTML = "Window Width: " + window.innerWidth;
+            div2.innerHTML = "Window Height: " + window.innerHeight;
+            if(window.innerWidth >= 900) {
+                h2.innerHTML = "Desktop Mode";
+            } else if(window.innerWidth >= 700){
+                h2.innerHTML = "Tablet Mode";
+            } else {
+                h2.innerHTML = "Mobile Mode";
+            }
+        }
+
+        div3.innerHTML = "The screen width: " + window.screen.width
+        
+    </script>
+    <!-- bom gives us the information that we need to know about the user browsing screen -->
+     <!-- innerWidth property of a window tells us what the size the window that is viewing the webpage -->
+     <!-- window.screen.width gives us the width of the device the user is using while window.innerWidth gives us the width of the browser-->
+    <!-- avail width and avail height is used to check for width that are available for use -->
+</body>
+</html>

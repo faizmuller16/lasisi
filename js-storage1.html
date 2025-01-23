@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Storage</title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <h1>Javascript Storage</h1>
+
+    <script>
+        sessionStorage.setItem("username", "david");
+        sessionStorage.removeItem("username");
+        // sessionStorage.clear();
+        const username = sessionStorage.getItem("username");
+        console.log(username);
+
+        localStorage.setItem("color", "red");
+        localStorage.setItem("age", "27");
+        localStorage.clear();
+        const color = localStorage.getItem("color");
+        document.write(color);
+        const age = localStorage.getItem("age");
+        console.log(age);
+
+        
+        localStorage.removeItem("color");
+        localStorage.clear();
+        
+    </script>
+</body>
+<!-- sessionStorage and local storage -->
+</html>

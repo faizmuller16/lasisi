@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String</title>
+</head>
+<body>
+    <h1>Javascript Strings</h1>
+
+    <script>
+        const message = 'Today is a good day! He\'s here!';
+        const firstName = "Aisha - Arike";
+        const lastName = 'Wasiu';
+        const middleName = "Olajumoke";
+        const fullName = firstName + " " + lastName + " " + middleName;
+        // const info = firstName + " has a middle name of " + middleName + " and a surname of " + lastName + ".";
+
+        const info = `${firstName} has a middle name of ${middleName} and a surname of 
+        ${lastName}.`;
+        
+        console.log(info);
+
+        document.write(firstName.toUpperCase())
+        console.log(middleName.toLowerCase())
+
+        console.log(firstName.slice(0, 5))
+
+        console.log(middleName.slice(-4));
+        document.write("</br>")
+        document.write(middleName.slice(3));
+
+        console.log(firstName.substring(2, 11));
+        console.log(firstName.substr(2, 9));
+
+       console.log(message.replace(/he/ig, "she"));
+       console.log(message.replace(/day/g, "date"));
+
+       console.log(middleName.indexOf("day"))
+       console.log(middleName.charAt(5));
+    </script>
+</body>
+</html>

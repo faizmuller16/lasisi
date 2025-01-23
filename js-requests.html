@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS REQUEST</title>
+</head>
+<body>
+    <h1>Javascript Requests</h1>
+    <main>
+        <section>
+            <article>
+                <img src="" alt="">
+                <h3>Title products</h3>
+                <div>
+                    <p>$344</p>
+                    <p>Featured</p>
+                </div>
+                <p>Product description</p>
+                <p>23/4/23</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // asynchronous requests are request that are made without waiting for another request to be completed
+        // AJAX- Asynchronpus Javascipt and fetch makes us know the data of where exactly we make the request to
+        // data coming from server side is modified to a json format javascript object notation
+        // then and catch function POST, PUT, PATCH,DELETE"
+
+        fetch["https://rickandmortyapi.com/api/character", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+           
+        }
+        .then(function(response) {
+            return response.json();
+            console.log(response);
+        })].then(function(data) {
+            for (let  i = 0;  i < data.length;  i++) {
+                const product = array[ i];
+                document.write(product.title + "</br>");
+                
+            }
+            document.write()
+            console.log(data);
+        })
+            
+       
+    </script>
+</body>
+</html>

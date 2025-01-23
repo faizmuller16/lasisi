@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM SELECTION</title>
+    <style>
+        article > h2 {
+            background-color: cyan;
+        }
+
+        #special {
+            background-color: lightgreen;
+            padding: 20px;
+            color: red;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .article-js {
+            background-color: aquamarine;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .bordered {
+            border: 10px solid red;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>JS DOM Selection</h1>
+        <h2>Document Object Model Selection Explained</h2>
+        <section>
+            <article>
+                <h2>Title 1</h2>
+                <img src="paul.jpg" alt="" style="width: 300px;">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+                </p>
+            </article>
+
+            <article id="article-2">
+                <h2>Title 2</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+
+                </p>
+            </article>
+
+            <article class="article-js">
+                <h2>Title 3</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+                </p>
+            </article>
+
+            <article class="article-js">
+                <h2>Title 4</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+
+                </p>
+            </article>
+
+            
+        </section>
+    </main>
+
+    <script>
+        //getElementById, getElementsClassName, getElementsByTagName, querySelector, querySelectorAll
+
+        const secondArticle = document.getElementById("article-2");
+        const jsArticles = document.getElementsByClassName("article-js");
+        const paragraphs =  document.getElementsByTagName("p");
+        const articlesH2 = document.querySelectorAll("article > h2");
+        const firstArticle = document.querySelector("article")
+
+        // console.log(jsArticles[1]);
+        // console.log(secondArticle);
+        // console.log(paragraphs[2]);
+        // console.log(articlesH2[3]);
+
+        console.log(articlesH2[1].textContent);
+        articlesH2[3].innerHTML = "Fourth <u>article</u> heading";
+
+        // secondArticle.className = "article-js";
+        // firstArticle.id = "special";
+        // jsArticles[1].className = "";
+        // jsArticles[0].className += " bordered";
+        jsArticles[1].classList.remove("article-js");
+        secondArticle.classList.add("article.js");
+        jsArticles[0].classList.add("bordered");
+        jsArticles[0].classList.toggle("article-js");
+        firstArticle.classList.toggle("article-js");
+        // console.log(image.src);
+
+        const image = document.querySelector("img");
+        image.src = ("cambell.jpg");
+        image.style.border = "30px solid red";
+        image.style.borderRadius = "20px";
+        
+
+        articlesH2[1].textContent = "Hello World!!!!";
+        // console.log(articlesH2[2]. innerText);
+        articlesH2[1].style.fontSize = "4rem";
+        articlesH2[0].style.fontWeight = "900";
+
+        console.log(jsArticles[0].className);
+        
+        // toggle is used to switch characteristics
+    </script>
+</body>
+</html>

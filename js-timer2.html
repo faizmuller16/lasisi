@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TIMING</title>
+</head>
+<body>
+    <h1>Javascript Timing</h1>
+    <button>Stop Timeout</button>
+    <button>Stop interval</button>
+    <div style="display: none;">
+        <h3>Subscribe to our news letter</h3>
+        <form action="">
+            <input type="email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <script>
+        const div = document.querySelector("div");
+        const buttons = document.getElementsByTagName("button");
+        function sayGreeting() {
+            console.log("Welcome!!", new Date().getTime());
+        }
+
+        const greetInterval = window.setInterval(sayGreeting,3000);
+
+        buttons[1].onclick = function() {
+            window.clearInterval(greetInterval);
+        }
+
+        function displayDiv() {
+            div.style.display = "block";
+        }
+
+        const alertTimeout = window.setTimeout(displayDiv, 3000)
+
+        buttons[0].onclick = function() {
+            window.clearTimeout(alertTimeout);
+        }
+    </script>
+</body>
+</html>

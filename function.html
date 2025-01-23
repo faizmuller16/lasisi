@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+    <script>
+        function functionName() {
+            // Code to run
+            function sayHello(name) {
+                const givenName = name ? name : "visitor";
+                document.write("Hello " + givenName + "!");
+                document.write("<br>");
+            }
+
+        }
+
+
+        function sayHello(name) {
+            document.write("Hello" + name + "!");
+            document.write("<br>");
+        }
+
+        sayHello("ARIB");
+        sayHello("ASDEMOLA");
+        sayHello("Saheed");
+        sayHello("Mulkler");
+
+        // Formula => 2 * pI * radius
+
+        function calcPerimeter(radius, unit) {
+            let perimeter = 2 * Math.PI * parseFloat(radius);
+            perimeter = perimeter.toFixed(2);
+            // document.write(" Perimeter of a circle of a radius " + radius + ": <b>" + perimeter + unit + "</b>");
+            // document.write("<br>")
+            return perimeter + unit;
+        }
+        const userRadius = prompt("Provide a radius to calculate perimeter")
+        calcPerimeter(10, "cm");
+        calcPerimeter(7, "cm");
+        calcPerimeter(userRadius, "cm");
+
+        const calculatedPerimeter = calcPerimeter(userRadius, "m")
+        document.write("Perimeter of a circle of a given radius "  + " <b>" + calculatedPerimeter + "</br>");
+        console.log(calculatedPerimeter);
+
+
+    </script>
+</html>

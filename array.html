@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAY</title>
+</head>
+<body>
+    <h1>Javascript Array</h1>
+
+    <script>
+        const students = ["Ismail", "Jobe", "Arib", "Shina", "Ramvo", "Peller", "Bola", "Buhari"];
+        // console.log(students.length);
+        students[4] = "Ajala";
+        students.push("Salami", "Ajala");
+        console.log( "After push =>" , students);
+
+        students.pop();
+        console.log( "After pop =>" , students);
+
+        students.unshift("New Student");
+        console.log( "After unshift =>" , students);
+
+        students.shift();
+        students.shift();
+        students.shift();
+        console.log( "After shift =>" , students);
+
+        students.shift();
+        console.log( "After shift =>" , students);
+
+       
+       console.log(students.toString().toUpperCase());
+
+
+       console.log(students.join(" * ").toUpperCase());
+
+       document.write("Index of Bola => ", students.indexOf("Bola"));
+       students.sort()
+    //    .reverse;
+       students.reverse();
+       document.write("<br>" + students);
+
+       const scores = [12, 9, 56, 105, 11, , 76, 435];
+       scores.sort(
+            function (x, y) {return y - x}
+       );
+       console.log(scores);
+
+       console.log(students.slice(2, 6));
+
+       students.splice(2, 0, "Ayo", "Bolaji")
+       document.write(" <br> " + students);
+
+       document.write("<ul>")
+       students.forEach(function(student, index) {
+            document.write("<li>" + student.toUpperCase() + "</li>");
+    })
+
+    //    students.splice(5, 2);
+
+    document.write("</ul>")
+
+       const nums = [2, 87, 33, 55, 9, 18];
+       const newNums = nums.map(function(num, i) {
+            return Math.pow(num, 2)
+       })
+
+       console.log(newNums);
+
+       const evens = nums.filter(function(num, i) {
+                return num % 2 === 0;
+       })
+
+       document.write("<p>" + evens + "</p>")
+
+
+       const allEven = nums.some(function(num, i) {
+            return num % 2 === 0;
+       }) 
+       console.log(allEven);
+
+       const firstThree = nums.findIndex(function(num, i) {
+                return num % 3 === 0;
+       })
+
+       console.log(firstThree);
+    //    43 % 1
+    //    2,3,5,7
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Events </h1>
+    <button>Click Me</button>
+
+    <form action="">
+        Name: <input type="text" id="name-input">
+        <br/>
+        Email: <input type="email" id="email-input">
+        <br>
+        Password <input type="password" id="pass-input">
+        <br>
+        <input type="submit" value="Register">
+    </form>
+   <p id="name-p">Name: </p>
+   <p id="email-p">Email: </p>
+   <p id="pass-p">Password: </p>
+
+    <script>
+        const button = document.querySelector("button");
+        const nameInput = document.getElementById("name-input");
+        const namePar = document.getElementById("name-p")
+        nameInput.onkeyup = function() {
+            namePar.innerHTML = nameInput.value;
+        }
+        // button.onclick = function() {
+        //     alert("Button was clicked!");
+        // }
+
+        button.ondblclick = function() {
+            document.body.style.backgroundColor = "cyan";
+        }
+
+        // unkey up. unkey down. unkey press
+    </script>
+</body>
+</html>
+

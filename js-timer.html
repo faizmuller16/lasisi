@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Timer</title>
+</head>
+<body>
+    <h1>Javascript Timer</h1>
+    <div id="timer">12:00pm</div>
+
+   <script>
+        // alert("This is a pop up alert")const timer = document.getElementById("timer")
+        var seconds = 0;
+        var minutes = 0;
+        var display = document.getElementById("timer");
+
+        var interval = setInterval(function() {
+            seconds++;
+            if(seconds = 60) {
+                minutes++;
+                seconds = 0;
+            }
+            display.textContent = (minutes < 10 ? '0' + minutes : minutes)  + ':' +
+            (seconds < 10 ? '0' + seconds : seconds);
+            if (minutes === 5) {
+                clearInterval(interval);
+            }
+        }, 1000)
+   </script>
+</body>
+</html>

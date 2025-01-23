@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>JS DOM Selection</h1>
+        <h2>Document Object Model Selection Explained</h2>
+        <section>
+            <article>
+                <h2>Title 1</h2>
+                <img src="paul.jpg" alt="" style="width: 300px;">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+                </p>
+            </article>
+
+            <article id="article-2">
+                <h2>Title 2</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+
+                </p>
+            </article>
+
+            <article class="article-js">
+                <h2>Title 3</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+                </p>
+            </article>
+            <article class="article-js">
+                <h2>Title 4</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+
+                </p>
+            
+            </article>
+
+            <article class="article-js">
+                <h2>Title 4</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+
+                </p>
+            
+            </article>
+        </section>
+
+        <article class="article-js">
+                <h2>Title 4</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ea tempore asperiores optio error expedita temporibus commodi? 
+                    Eaque asperiores nemo consequatur explicabo, ratione unde minima repudiandae nulla hic nesciunt et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Accusantium, pariatur? Dicta beatae laudantium iste ipsam nemo, earum nam nisi fugiat natus vitae corrupti.
+                </p>
+        </article>
+    </main>
+        <script>
+            const section = document.querySelector("section");
+            const sectionArticleJS = section.querySelectorAll("article.article-js");
+            // const sectionFirstChild = sectionfirstElementChild;
+
+            section.firstElementChild.style.backgroundColor = "lightgreen";
+            section.lastElementChild.innerHTML = "<h1>Hello World!!</h1>"
+            console.log(section.childNodes);
+            section.children[1].style.fontFamily = "verdana";
+            console.log(section.children[1].previousElementSibling.firstElementChild.tagName);
+
+            section.style.backgroundColor = "cyan";
+            console.log();
+
+        </script>
+
+        <!-- firstelementchild is used to select the real element because of the space of the between the section and article -->
+        <!-- ,Childnodes- it wouls select the exact elements, .childrenproperty- it wouls select textnodes and elements -->
+        <!-- previousElementSibling is used to select the element before a  target element, while nextElementsibling is used to select an element after a target element-->
+</body>
+</html>

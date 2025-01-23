@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js BOM2 </title>
+</head>
+<body>
+    <h1>BOM</h1>
+    <h2></h2>
+
+    <button>Click</button>
+    <button id="forward">Forward</button>
+    <button id="back">Back</button>
+
+    <script>
+        console.log(window.screen.width);
+        console.log(window.screen.height);
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+        console.log(window.screen.availWidth);
+
+        const h2 = document.querySelector("h2");
+
+        window.onresize = function() {
+            h2.innerHTML = window.innerWidth;;
+            if(window.innerWidth > 900) {
+                h2.innerHTML = "Desktop screen";
+            } else if(window.innerWidth > 500) {
+                h2.innerHTML = "Tab view"
+            } else {
+                h2.innerHTML = "Mobile view";
+            }
+        }
+
+
+        const button = document.querySelector("button")
+        button.onclick = function() {
+            location.assign("variables.html")
+        }
+
+        const forward = document.getElementById("forward");
+        const back = document.getElementById("back")
+
+        // back.onclick = function() {
+        //     location.assign("function.html")
+        // }
+
+        forward.onclick = function() {
+            history.forward()
+        }
+
+        back.onclick = function() {
+            history.back()
+        }
+
+    </script>
+</body>
+</html>

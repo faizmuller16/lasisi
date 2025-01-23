@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+let message = prompt("I am a good boy and i wish to have bastard money:");
+
+
+let firstPart = message.slice(0, 30); 
+let formattedFirstPart = firstPart.slice(0, 5).toUpperCase() + firstPart.slice(5);  
+document.write(formattedFirstPart);
+
+
+let remainingPart = message.slice(30);  
+
+
+let lastPosition = message.lastIndexOf("day");  
+document.write("<br>Last position of 'day': " + lastPosition);
+
+    </script>
+</body>
+</html>

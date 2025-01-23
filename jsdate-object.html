@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+</head>
+<body>
+    <h1>Javascript Date Object</h1>
+    <button id="forward">Forward</button>
+
+    <script>
+        const date = new Date();
+        console.log(date.toDateString());
+        console.log(date.toTimeString());
+        console.log(date.toLocaleDateString());
+        console.log(date.toLocaleTimeString());
+
+        console.log(date.getFullYear());
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getMonth());
+        console.log(date.getTime());
+        const button = document.querySelector("button");
+        // reference point = January 1 1970
+
+        const aishaDB = new Date("7/1/2011");
+        const millDiff = date.getTime() - aishaDB.getTime();
+        const days = millDiff/1000/60/60/24;
+        console.log(Math.floor(days));
+
+        const date2 = new Date();
+        date2.setMonth(4);
+        date2.setDate(1);
+        console.log(date2);  
+        
+        button.onclick = function() {
+            location.assign("js-bom2.html");
+        }
+
+    </script>
+</body>
+</html>

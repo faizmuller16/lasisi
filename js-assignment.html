@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS QUIZ</title>
+</head>
+<body>
+    <h1>JS QUIZ</h1>
+    
+
+
+    <script>
+       // Constructor function for Quiz
+    function Quiz(title, questions, timeAllowed, currentQuestion) {
+    this.title = title;
+    this.questions = questions;
+    this.timeAllowed = timeAllowed;
+    this.currentQuestion = currentQuestion;
+
+ 
+    this.addQuestion = function(question) {
+    this.questions.push(question);
+  };
+}
+
+// Example questions for Mathematics quiz
+const mathQuestions = [
+  {
+    text: "What is 25 + 20?",
+    options: [45, 40, 57, 68],
+    correctAnswer: 45
+  },
+  {
+    text: "What is 3 * 3?",
+    options: [6, 9, 12, 15],
+    correctAnswer: 9
+  }
+];
+
+
+const Mathematics = new Quiz("Mathematics Quiz", mathQuestions, 300, 0);
+
+
+const physicsQuestions = [
+  {
+    text: "What is the speed of light?",
+    options: ["3x10^8 m/s", "2x10^8 m/s", "1x10^8 m/s", "4x10^8 m/s"],
+    correctAnswer: "3x10^8 m/s"
+  },
+  {
+    text: "What is the formula for Newton's second law?",
+    options: ["F = ma", "F = mv", "F = m^2", "F = a^2"],
+    correctAnswer: "F = ma"
+  }
+];
+
+
+const Physics = new Quiz("Physics Quiz", physicsQuestions, 600, 0);
+
+
+Mathematics.addQuestion({
+  text: "What is 5 - 3?",
+  options: [1, 2, 3, 4],
+  correctAnswer: 2
+});
+
+
+console.log(Mathematics);
+console.log(Physics);
+
+    </script>
+</body>
+</html>
